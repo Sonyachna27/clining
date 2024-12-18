@@ -1,0 +1,49 @@
+/*!
+ * jQuery Before/After plugin
+ * 
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <https://www.gnu.org/licenses/>.
+ * 
+ * author: sizeof(cat) <sizeofcat AT riseup DOT net> https://sizeof.cat
+ * url: https://sizeof.cat/project/software/jquery-before-after/
+ * copyright: 2020-2022
+ * version: 1.1.0
+ * license: GPLv3 https://sizeof.cat/LICENSE.txt
+ */
+.ba-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border-right: 3px solid #333;
+	overflow: hidden;
+	box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.6);
+	cursor: ew-resize;
+}
+
+.ba-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.ba-caption {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 120;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 2px 10px;
+	display: none;
+}

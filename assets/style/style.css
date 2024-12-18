@@ -1,0 +1,110 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(../fonts/RedHatDisplay-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(../fonts/RedHatDisplay-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(../fonts/RedHatDisplay-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(../fonts/RedHatDisplay-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(../fonts/RedHatDisplay-ExtraBold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(../fonts/RedHatDisplay-Black.ttf);
+  font-weight: 900;
+}
+.container {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
