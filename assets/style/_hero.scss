@@ -1,0 +1,55 @@
+.hero{
+	height: 100vh;
+	background: url(../images/hero-img.jpg) center center / cover no-repeat;
+	&__top{
+		border-bottom: 4px solid $--blue;
+		background: rgba(244, 248, 255, 0.90);
+		position: relative;
+		padding: 60px 0;
+	}
+	&__content{
+		max-width: 810px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		position: relative;
+		align-items: center;
+		h1{
+			@include titleH1;
+		}
+		p{
+			text-align: center;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 170%;
+			max-width: 750px;
+			margin-bottom: 20px;
+		}
+	}
+	&__btn{
+		width: 140px;
+		height: 140px;
+	
+		background-color: $--blue;
+		color: $--white;
+		text-transform: uppercase;
+		@include p3-1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 60px 24px;
+		border-radius: 50%;
+		margin: 0 auto;
+		margin-bottom: -140px;
+		aspect-ratio: 1;
+		@media screen and (min-width:768px) {
+		width: 180px;
+		height: 180px;
+		margin-bottom: -180px;
+		padding: 80px 24px;
+		}
+		
+	}
+}

@@ -1,0 +1,35 @@
+.photo{
+	&__container{
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+
+	}
+	&__item{
+		width: 100%;
+		max-height: 420px;
+		@media screen and (min-width:1024px) {
+			width: calc((100% / 3) - 20px);
+		}
+		@media screen and (min-width:768px) and (max-width:1023.9px) {
+			width: calc((100% / 2) - 20px);
+		}
+		&.ba-slider .handle{
+			background: $--white;
+		}
+		&.ba-slider .handle:after {
+			content: '';
+			width: 54px;
+			height: 54px;
+			border: none;
+			box-shadow: none;
+			margin: -32px 0 0 -25px;
+			background: url(../images/hanle.svg) center center / cover no-repeat;
+		@media screen and (min-width:768px) {
+			width: 70px;
+			height: 70px;
+			margin: -32px 0 0 -34px;
+		}
+		}
+	}
+}
