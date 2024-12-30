@@ -1,4 +1,9 @@
 .photo{
+	background-color: $--body-bg;
+	padding-bottom: 80px;
+	@media screen and (min-width:768px) {
+		padding-bottom: 160px;
+	}
 	&__container{
 		display: flex;
 		gap: 20px;

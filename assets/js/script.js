@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	
 	toggleMenu();
 	animationHeader();
+	accordionFunction();
 });
 
 const animationHeader = () =>{
@@ -46,3 +47,12 @@ $(document).ready(function () {
     $(this).beforeAfter();
   });
 });
+const accordionFunction = () => {
+  const accordionItems = document.querySelectorAll(".accord-item");
+  
+  accordionItems.forEach((item) => {
+    item.addEventListener("click", function () {
+        item.classList.toggle("active");
+    });
+  });
+};

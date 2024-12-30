@@ -1,0 +1,77 @@
+.faq{
+	&__item{
+		padding: 20px;
+		background-color: $--white;
+		border-bottom: 1px solid #E2E8F0;
+		@media screen and (min-width:768px) {
+			padding: 40px;
+		}
+		&:hover{
+			.faq__item__top{
+				color: $--blue;
+			}
+			.faq-icon-wrapper{
+				background-color: #DDE9FF;
+			}
+		}
+		&__top{
+		@include titleH4;
+			display: flex;
+			gap: 20px;
+			align-items: center;
+			justify-content: space-between;
+			transition: .3s linear;
+			.active &{
+				color: $--blue;
+			}
+		}
+&-bottom{
+			@include p1;
+			margin-bottom: 10px;
+			ul{
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				list-style-position: inside;
+				list-style-type: square;
+				margin-bottom: 10px;
+				&::marker{
+					color: $--blue;
+
+				}
+			}
+}
+	}
+	&-icon-wrapper{
+		border-radius: 500px;
+		background-color: transparent;
+		width: 44px;
+		height: 44px;
+		position: relative;
+	transition: .3s linear;
+		.active &{
+			background-color: #DDE9FF;
+		}
+		&:before,
+		&::after{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-color: $--blue;
+			content: '';
+			width: 14px;
+			height: 2px;
+			transition: .3s linear;
+		}
+		&:after{
+			transform: translate(-50%, -50%);
+		}
+		&:before{
+			transform: translate(-50%, -50%) rotate(90deg);
+			.active &{
+				transform: translate(-50%, -50%) rotate(180deg);
+			}
+		}
+	}
+	
+}

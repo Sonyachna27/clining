@@ -42,7 +42,7 @@ $--blue:#8EB0EC;
 $--white: #fff;
 $--black: #404040;
 $--blue-silver:#6674A0;
-$--bg-color: #F4F8FF;
+$--bg-color: #F4F8FF; 
 $--blue-gray: #6674A0;
 $--silver: #BBC0CA;
 $--body-bg: #F9FBFF; 
@@ -166,7 +166,12 @@ body{
 		margin-bottom: 160px;
 	}
 }
-
+.pb-m{
+	padding-bottom: 80px;
+	@media screen and (min-width:768px) {
+		padding-bottom: 160px;
+	}
+}
 .justify-title{
 	display: flex;
 	justify-content: space-between;
@@ -183,7 +188,7 @@ body{
 	h2{
 		@include titleH2;
 		text-transform: uppercase;
-		max-width: 640px;
+		max-width: 530px;
 	}
 	a{
 		display: flex;
@@ -196,7 +201,7 @@ body{
 .title-wrap{
 	display: flex;
 	flex-direction: column;
-	
+	align-items: flex-start;
 }
 .center-title{
 	max-width: fit-content;
