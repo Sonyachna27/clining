@@ -146,6 +146,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  transition: 0.3s linear;
   max-width: 210px;
   width: 100%;
 }
@@ -156,6 +157,12 @@ body {
 }
 .btn:hover {
   background-color: #404040;
+}
+
+.white-btn {
+  background-color: #fff;
+  color: #8EB0EC;
+  border: 1px solid #8EB0EC;
 }
 
 .p-m {
@@ -181,14 +188,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: 10px;
+  gap: 7px;
 }
 .socials a {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
 }
-.socials a:hover circle {
-  fill: #A3926B;
+.socials a:hover rect {
+  fill: #fff;
+}
+.socials a:hover path {
+  fill: #404040;
 }
 .socials svg {
   max-width: 100%;
@@ -196,7 +206,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.socials svg circle {
+.socials svg rect, .socials svg path {
   transition: 0.3s linear;
 }
 
@@ -210,16 +220,10 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   gap: 10px;
-  font-size: 19px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-}
-@media screen and (min-width: 768px) {
-  .contact a,
-  .contact div {
-    font-size: 24px;
-  }
 }
 @media screen and (max-width: 375px) {
   .contact a,
@@ -229,12 +233,16 @@ body {
 }
 .contact a svg,
 .contact div svg {
-  width: 48px;
-  height: 48px;
+  width: 22px;
+  height: 22px;
+}
+.contact a svg path,
+.contact div svg path {
+  transition: 0.3s linear;
 }
 .contact a:hover,
 .contact div:hover {
-  color: #BFA77B;
+  color: #8EB0EC;
 }
 
 .socials a,
@@ -1764,4 +1772,254 @@ form fieldset input[type=radio]:checked:after {
 }
 .active .faq-icon-wrapper:before {
   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: stretch;
+  background-color: #fff;
+}
+@media screen and (min-width: 1024px) {
+  .promo__container {
+    display: grid;
+    grid-template-columns: 54% 46%;
+  }
+}
+.promo__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .promo__content {
+    padding: 80px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023.9px) {
+  .promo__content {
+    padding: 40px;
+  }
+}
+.promo__content div:not([class]) {
+  font-family: "Red Hat Display";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.68px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .promo__content div:not([class]) {
+    font-size: 34px;
+  }
+}
+.promo__content p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .promo__content p {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .promo__content {
+    height: 100%;
+  }
+}
+.promo__btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .promo__btns {
+    gap: 20px;
+  }
+}
+.promo__btns .btn {
+  padding: 18px;
+}
+.promo__img {
+  width: 100%;
+}
+.promo__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 1024px) {
+  .promo__img {
+    height: 100%;
+  }
+}
+
+.footer {
+  background-color: #25283D;
+}
+.footer__top {
+  padding: 100px 0;
+  border-bottom: 1px solid #6674A0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-direction: column;
+}
+@media screen and (min-width: 1240px) {
+  .footer__top {
+    gap: 150px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__top {
+    flex-direction: row;
+  }
+}
+.footer__logo {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    max-width: 165px;
+  }
+}
+@media screen and (max-width: 1023.9px) {
+  .footer__logo {
+    text-align: center;
+    align-items: center;
+  }
+}
+.footer__logo .logo {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.footer__logo p {
+  width: 100%;
+  position: relative;
+}
+.footer__logo p:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #6674A0;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+.footer__wrap {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 1240px) {
+  .footer__wrap {
+    width: 69%;
+    gap: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__wrap {
+    flex-direction: row;
+  }
+}
+.footer__wrap nav {
+  color: #ACB2C6;
+}
+.footer__wrap nav ul {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+@media screen and (min-width: 1240px) {
+  .footer__wrap nav ul {
+    gap: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer__wrap nav ul {
+    flex-direction: row;
+  }
+}
+.footer__wrap nav ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__wrap nav ul li a:not(.sub-menu li a) {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2px;
+}
+.footer__wrap nav ul .sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__wrap nav ul .sub-menu li a {
+  transition: 0.3s linear;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+.footer__wrap nav ul .sub-menu li a:hover {
+  color: #fff;
+}
+.footer__block {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.footer__block__title {
+  font-family: "Manrope";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+.footer__contact {
+  color: #fff;
+}
+.footer__contact a:hover svg path {
+  fill: #8EB0EC;
+}
+.footer__contact svg path {
+  fill: #fff;
+}
+.footer .form__block {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footer .form__block {
+    max-width: 257px;
+    width: 100%;
+  }
+}
+.footer .form__block .btn {
+  max-width: 100%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
