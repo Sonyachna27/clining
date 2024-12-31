@@ -52,7 +52,7 @@
 								<li><a href="./page-contact.html">Contact us</a></li>
 							</ul>
 						</nav>
-						<a href="#" class="btn">Get quote</a>
+						<button data-open="open" class="btn">Get quote</button>
 						<div class="header__linkpoint">
 							<div class="header__social">
 								<a href="mailto:escleaning@msn.com">
@@ -668,6 +668,48 @@
 			</div>
 		</div>
 	</section>
+	<div class="popup">
+		<div class="popup-bg" data-close="close"></div>
+			<div class="popup-wrapper">
+				<div class="popup-wrap">
+					<button class="close popup-close" data-close="close">
+						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+							<rect width="48" height="48" fill="#BBC0CA"/>
+							<path d="M14.8732 14.873L33.5932 32.4505L14.8732 14.873ZM33.8027 14.873L15.0827 32.4505L33.8027 14.873Z" fill="#8EB0EC"/>
+							<path d="M14.8732 14.873L33.5932 32.4505M33.8027 14.873L15.0827 32.4505" stroke="white" stroke-width="2"/>
+							</svg>
+					</button>
+					<div class="popup__form">
+						<div>Want to book cleaning in Denver?</div>
+						<form action="#" type="post">
+							<input type="text" name="name" placeholder="Name">
+							<input type="tel" name="phone" placeholder="Phone number">
+							<input type="email" name="email" placeholder="Email">
+							<input type="text" name="service" placeholder="Services">
+							<fieldset>
+								<label>
+										<input type="radio" name="contact" value="phone">
+										Contact via Phone
+								</label>
+						
+								<label>
+										<input type="radio" name="contact" value="whatsapp">
+										Contact via WhatsApp
+								</label>
+						
+								<label >
+										<input type="radio" name="contact" value="telegram">
+										Contact via Telegram
+								</label>
+						
+						</fieldset>
+							<input type="submit" value="Get a quote" >
+					</form>
+					</div>
+				</div>
+			
+		</div>
+	</div>
 	</main>
 	<footer class="footer">
 		<div class="container">
@@ -763,8 +805,6 @@
 		</div>
 	</footer>
 	<script src="./assets/js/query.js"></script>
-
-
 <script src="./assets/js/before-after.js"></script>
 	<script src="./assets/js/script.js"></script>
 </body>
