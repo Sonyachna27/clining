@@ -1,5 +1,8 @@
 .discount{
 	background-color: $--body-bg;
+	&.discount-transparent{
+		background-color: transparent;
+	}
 	&__wrap{
 		display: flex;
 		flex-wrap: wrap;
