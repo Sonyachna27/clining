@@ -81,4 +81,17 @@
 				color: #ADADAD;
 			}
 		}
+		&__btns{
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			flex-direction: column;
+			@media screen and (min-width:768px) {
+				flex-direction: row;
+			}
+		&	.btn{
+			max-width: 100%;
+			width: 100%;
+		}
+		}
 }

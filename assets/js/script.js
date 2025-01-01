@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	animationHeader();
 	accordionFunction();
 	handlePopup();
+	windowLoad();
 });
 
 const animationHeader = () =>{
@@ -77,3 +78,54 @@ const handlePopup = () => {
 	openPopup();
 	closePopup();
 };
+function windowLoad() {
+	const animationDuration = 3000;
+	const frameDuration = 1000 / 60;
+	const totalFrames = Math.round(animationDuration / frameDuration);
+	const easeOutQuad = t => t * (2 - t);
+
+	const numScroll = statValue => {
+			const countTo = parseInt(statValue.dataset.target.replace(/,/g, ''), 10);
+			let frame = 0;
+
+			const counter = setInterval(() => {
+					frame++;
+					const progress = easeOutQuad(frame / totalFrames);
+					const currentCount = Math.round(countTo * progress);
+
+					statValue.innerHTML = currentCount;
+
+					if (frame === totalFrames) {
+							clearInterval(counter);
+							statValue.innerHTML = countTo;
+					}
+			}, frameDuration);
+	};
+
+	const statValueInit = (statValues = document.querySelectorAll('.stat-value')) => {
+			statValues.forEach(numScroll);
+	};
+
+	const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+					if (entry.isIntersecting) {
+							const statValues = entry.target.querySelectorAll('.stat-value');
+							if (statValues.length) {
+									statValueInit(statValues);
+							}
+					}
+			});
+	}, { threshold: 0.7 });
+
+	document.querySelectorAll('.count__container').forEach(section => {
+			observer.observe(section);
+	});
+
+	if (document.readyState === 'complete') {
+			statValueInit();
+	} else {
+			window.addEventListener('DOMContentLoaded', () => {
+					statValueInit();
+			});
+	}
+}
