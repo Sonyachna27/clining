@@ -45,8 +45,10 @@
 	&-icon-wrapper{
 		border-radius: 500px;
 		background-color: transparent;
-		width: 44px;
-		height: 44px;
+		min-width: 44px;
+		min-height: 44px;
+		max-width: 44px;
+		max-height: 44px;
 		position: relative;
 	transition: .3s linear;
 		.active &{

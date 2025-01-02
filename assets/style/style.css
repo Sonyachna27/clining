@@ -650,11 +650,15 @@ form fieldset input[type=radio]:checked:after {
 .header__menu .header__linkpoint {
   flex-direction: column-reverse;
   align-items: start;
+  gap: 20px;
 }
 @media screen and (min-width: 1023.9px) {
   .header__menu .header__linkpoint {
     display: none;
   }
+}
+.header__menu .header__linkpoint .header__social {
+  gap: 20px;
 }
 .header__linkpoint__tel {
   display: flex;
@@ -799,6 +803,7 @@ form fieldset input[type=radio]:checked:after {
     padding: 20px;
     transition: 0.3s linear;
     background-color: #fff;
+    gap: 30px;
   }
   .open .header__menu {
     left: 0;
@@ -869,23 +874,10 @@ form fieldset input[type=radio]:checked:after {
 .header__menu nav ul li.current_page_item {
   color: #8EB0EC;
 }
-.header__menu nav ul li.current_page_item a {
-  position: relative;
-  transition: 0.3s linear;
-  height: 100%;
-  display: inline-block;
-  padding: 31px 0px;
-}
-.header__menu nav ul li.current_page_item a:after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: #8EB0EC;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(50%);
-  transition: 0.3s linear;
+@media screen and (min-width: 1024px) {
+  .header__menu nav ul li.current_page_item a:after {
+    width: 100%;
+  }
 }
 .header__menu nav ul li:hover {
   color: #fff;
@@ -893,9 +885,6 @@ form fieldset input[type=radio]:checked:after {
 @media screen and (max-width: 1023.9px) {
   .header__menu nav ul li {
     width: 100%;
-  }
-  .header__menu nav ul li.current_page_item {
-    color: #8EB0EC;
   }
 }
 
@@ -1853,8 +1842,10 @@ form fieldset input[type=radio]:checked:after {
 .faq-icon-wrapper {
   border-radius: 500px;
   background-color: transparent;
-  width: 44px;
-  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  max-width: 44px;
+  max-height: 44px;
   position: relative;
   transition: 0.3s linear;
 }
