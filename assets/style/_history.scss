@@ -1,5 +1,6 @@
 .history{
 	background-color: $--body-bg;
+	overflow: hidden;
 	&__wrap{
 		display: flex;
 		flex-direction: column;

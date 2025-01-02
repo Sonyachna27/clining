@@ -28,37 +28,7 @@
 			color: $--blue;
 		}
 	}
-	&-icon-wrapper{
-		border-radius: 500px;
-		background-color: transparent;
-		width: 44px;
-		height: 44px;
-		position: relative;
-	transition: .3s linear;
-		.active &{
-			background-color: #DDE9FF;
-		}
-		&:before,
-		&::after{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			background-color: $--blue;
-			content: '';
-			width: 14px;
-			height: 2px;
-			transition: .3s linear;
-		}
-		&:after{
-			transform: translate(-50%, -50%);
-		}
-		&:before{
-			transform: translate(-50%, -50%) rotate(90deg);
-			.active &{
-				transform: translate(-50%, -50%) rotate(180deg);
-			}
-		}
-	}
+	
 	&-bottom-wrap{
 		display: flex;
 		gap: 40px;
@@ -106,6 +76,37 @@
 		}
 		& .btn{
 			max-width: 258px;
+		}
+	}
+}
+&-icon-wrapper{
+	border-radius: 500px;
+	background-color: transparent;
+	width: 44px;
+	height: 44px;
+	position: relative;
+transition: .3s linear;
+	.active &{
+		background-color: #DDE9FF;
+	}
+	&:before,
+	&::after{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background-color: $--blue;
+		content: '';
+		width: 14px;
+		height: 2px;
+		transition: .3s linear;
+	}
+	&:after{
+		transform: translate(-50%, -50%);
+	}
+	&:before{
+		transform: translate(-50%, -50%) rotate(90deg);
+		.active &{
+			transform: translate(-50%, -50%) rotate(180deg);
 		}
 	}
 }

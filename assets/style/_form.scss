@@ -35,6 +35,21 @@
 		margin-bottom: 26px;
 		@include p2;
 	}
+	fieldset{
+		color: $--white;
+		input[type="radio"]{
+
+			&:after{
+				border: .5px solid $--white;
+			}
+			&:checked{
+				
+				&:after{
+					background-color: $--white;
+				}
+			}
+		}
+	}
 	input[type="submit"]{
 		background-color: $--white;
 		color: $--blue;

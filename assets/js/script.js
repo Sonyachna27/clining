@@ -6,8 +6,26 @@ document.addEventListener("DOMContentLoaded", function () {
 	accordionFunction();
 	handlePopup();
 	windowLoad();
+	animateAboutText();
 });
 
+setTimeout(function () {
+	let aosOffset = 120;
+	if (window.innerWidth < 480) {
+		aosOffset = 30;
+	}
+	AOS.init({
+		duration: 400,
+		easing: 'ease-out-quart',
+		offset: aosOffset
+	});
+}, 100);
+const animateAboutText = () =>{
+	const aboutText = document.querySelectorAll('.about__content p, .footer nav li, .footer__block');
+	aboutText.forEach((text) => {
+		text.setAttribute('data-aos', 'fade-up');
+	})
+}
 const animationHeader = () =>{
 	let lastScrollTop = 0;
 
@@ -51,13 +69,21 @@ $(document).ready(function () {
 });
 const accordionFunction = () => {
   const accordionItems = document.querySelectorAll(".accord-item");
-  
+
   accordionItems.forEach((item) => {
     item.addEventListener("click", function () {
-        item.classList.toggle("active");
+      item.classList.toggle("active");
+    });
+
+    const buttons = item.querySelectorAll("button");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
     });
   });
 };
+
 const handlePopup = () => {
 	const openPopup = () => {
 			document.querySelectorAll('[data-open="open"]').forEach(element => {
