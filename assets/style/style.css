@@ -2243,11 +2243,6 @@ form fieldset input[type=radio]:checked:after {
     padding: 60px 40px;
   }
 }
-@media screen and (max-width: 767.9px) {
-  .popup-wrap {
-    margin-top: 55px;
-  }
-}
 .popup-wrap .close {
   position: absolute;
   top: 0;
@@ -2263,9 +2258,8 @@ form fieldset input[type=radio]:checked:after {
 }
 @media screen and (max-width: 1023px) {
   .popup-wrap .close {
-    top: -32px;
-    right: 50%;
-    transform: translate(50%, -50%);
+    top: 20px;
+    right: 20px;
   }
 }
 .popup-wrap .close svg {
@@ -2290,6 +2284,11 @@ form fieldset input[type=radio]:checked:after {
 @media screen and (max-width: 767px) {
   .popup-wrap div:not([class]) {
     font-size: 17px;
+  }
+}
+@media screen and (max-width: 1023.9px) {
+  .popup-wrap div:not([class]) {
+    padding-right: 48px;
   }
 }
 .popup-wrap p {
