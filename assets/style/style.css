@@ -983,6 +983,7 @@ form fieldset input[type=radio]:checked:after {
   margin: 0 auto;
   margin-bottom: -140px;
   aspect-ratio: 1;
+  animation: heroAnimate 15s infinite linear;
 }
 @media screen and (min-width: 768px) {
   .hero__btn {
@@ -993,6 +994,14 @@ form fieldset input[type=radio]:checked:after {
   }
 }
 
+@keyframes heroAnimate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .advantages {
   background-color: #F9FBFF;
 }
@@ -2232,6 +2241,11 @@ form fieldset input[type=radio]:checked:after {
 @media screen and (min-width: 768px) {
   .popup-wrap {
     padding: 60px 40px;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .popup-wrap {
+    margin-top: 55px;
   }
 }
 .popup-wrap .close {

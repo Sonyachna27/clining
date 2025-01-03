@@ -43,12 +43,22 @@
 		margin: 0 auto;
 		margin-bottom: -140px;
 		aspect-ratio: 1;
-	
+		animation: heroAnimate 15s infinite linear;
+   
+
 		@media screen and (min-width:768px) {
 		width: 180px;
 		height: 180px;
 		margin-bottom: -180px;
 		padding: 80px 24px;
 		}
+	}
+}
+@keyframes heroAnimate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
 	}
 }
