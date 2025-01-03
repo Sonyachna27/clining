@@ -54,10 +54,7 @@
 		}
 		.btn{
 			padding: 18px;
-			@media screen and (max-width:368px) {
-				width: 100%;
-				max-width: 100%;
-			}
+			max-width: 100%;
 		}
 	}
 	&__img{
