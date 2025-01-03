@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	accordionFunction();
 	handlePopup();
 	windowLoad();
-	animateAboutText();
+	animateText();
+	animateHeroText();
 });
 
 setTimeout(function () {
@@ -15,17 +16,18 @@ setTimeout(function () {
 		aosOffset = 30;
 	}
 	AOS.init({
-		duration: 400,
-		easing: 'ease-out-quart',
+		// duration: 400,
+		// easing: 'ease-out-quart',
 		offset: aosOffset
 	});
 }, 100);
-const animateAboutText = () =>{
+const animateText = () =>{
 	const aboutText = document.querySelectorAll('.about__content p, .footer nav li, .footer__block');
 	aboutText.forEach((text) => {
 		text.setAttribute('data-aos', 'fade-up');
 	})
 }
+
 const animationHeader = () =>{
 	let lastScrollTop = 0;
 
